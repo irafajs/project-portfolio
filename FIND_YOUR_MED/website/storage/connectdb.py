@@ -21,7 +21,7 @@ class Connectsqldb():
   def __init__(self):
     env_file_path = "/home/jirafasha/Desktop/MED_FINDER/website"
     load_dotenv(dotenv_path=os.path.join(env_file_path, ".env"))
-    dname = os.getenv("DATABASE_NAME")  # Replace "PATH_VARIABLE_NAME" with the actual variable name
+    dname = os.getenv("DATABASE_NAME")
     duser=os.getenv("DATABASE_USER") 
     dhost=os.getenv("DATABASE_HOST") 
     dpassword=os.getenv("DATABASE_PASSWORD") 

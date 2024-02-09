@@ -1,7 +1,6 @@
 from flask import Blueprint, render_template, request, flash, redirect, url_for
 from .models import User
 from werkzeug.security import generate_password_hash, check_password_hash
-#from . import db   ##means from __init__.py import db
 from flask_login import login_user, login_required, logout_user, current_user
 from flask import request, redirect, url_for
 from .models import User
@@ -39,7 +38,7 @@ def logout():
 @auth.route('/sign-up', methods=['GET', 'POST'])
 def sign_up():
     from flask import request, redirect, url_for,session
-    from .models import User  # Assuming you have a User model defined
+    from .models import User
     from .storage.connectdb import Connectsqldb
     from sqlalchemy.orm import scoped_session, sessionmaker
     from sqlalchemy import create_engine
@@ -70,7 +69,7 @@ def sign_up():
                 }
         env_file_path = "/home/jirafasha/Desktop/MED_FINDER/website"
         load_dotenv(dotenv_path=os.path.join(env_file_path, ".env"))
-        dname = os.getenv("DATABASE_NAME")  # Replace "PATH_VARIABLE_NAME" with the actual variable name
+        dname = os.getenv("DATABASE_NAME")
         duser=os.getenv("DATABASE_USER") 
         dhost=os.getenv("DATABASE_HOST") 
         dpassword=os.getenv("DATABASE_PASSWORD") 
@@ -84,9 +83,6 @@ def sign_up():
 
         #Connectsqldb.new(data)
         #db_connector.new(data)
-        # Optionally, you may redirect the user to a different page after successful signup
-        return redirect(url_for('auth.login'))  # Assuming you have a login route named 'auth.login'
+        return redirect(url_for('auth.login'))
 
-    # Render the sign-up form template for GET requests
-    return render_template('sign_up.html')  # Assuming you have a sign-up form template
-
+    return render_template('sign_up.html')
