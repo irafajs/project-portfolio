@@ -1,0 +1,47 @@
+{% extends "profile-base.html" %} 
+{% block content %}
+    <section class="table-section">
+        <table id="medicine-table">
+            <thead>
+                <tr>
+                    <th>Medicine Name</th>
+                    <th>Description</th>
+                    <th>Quantity</th>
+                </tr>
+            </thead>
+            <tbody>
+            </tbody>
+        </table>
+        <button id="add-row-btn">Add Row</button>
+        <form id="add-row-form" style="display: none;">
+            <input type="text" id="medicine_name" placeholder="Medicine Name">
+            <input type="text" id="description" placeholder="Description">
+            <input type="number" id="quantity" placeholder="Quantity">
+            <button type="submit">Submit</button>
+        </form>
+        <button id="save-btn" style="display: none;">Save</button>
+    </section>
+
+    <script>
+        document.getElementById('add-row-btn').addEventListener('click', function() {
+            document.getElementById('add-row-form').style.display = 'block';
+        });
+
+        document.getElementById('add-row-form').addEventListener('submit', function(event) {
+            event.preventDefault();
+            var table = document.getElementById('medicine-table').getElementsByTagName('tbody')[0];
+            var newRow = table.insertRow(table.rows.length);
+            newRow.insertCell(0).innerHTML = '<td>' + document.getElementById('medicine_name').value + '</td>';
+            newRow.insertCell(1).innerHTML = '<td>' + document.getElementById('description').value + '</td>';
+            newRow.insertCell(2).innerHTML = '<td>' + document.getElementById('quantity').value + '</td>';
+            this.reset();
+            this.style.display = 'none';
+            document.getElementById('save-btn').style.display = 'block';
+        });
+
+        document.getElementById('save-btn').addEventListener('click', function() {
+            // Code to save data to the database goes here
+            alert("Data saved to the database!");
+        });
+    </script>
+{% endblock %}

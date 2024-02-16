@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>PHARMACY_NAME</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+  <link rel="stylesheet" href="/static/styles/profile.css">
+
+</head>
+<body>
+    <section>
+        <div class="home_button">
+            <h2>PHARMACY NAME</h2>
+        </div>
+        <div class="stock-new">
+            <button><a id="new-med" href="/"><h2>Add new stock</h2></a></button>
+        </div>
+        <div class="stock-edit">
+            <button><a id="new-med" href="/"><h2>Edit stock</h2></a></button>
+        </div>    
+    </section>
+
+    <section class="table-section">
+        <table>
+            <thead>
+                <tr>
+                    <th>Medicine ID</th>
+                    <th>Medicine Name</th>
+                    <th>Description</th>
+                    <th>Quantity</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for medicine in medicines %}
+                <div class="search-stock">
+                    <form>
+                      <div class="subscribe-form">
+                        <input type="text" name="Search" placeholder="search in your stcok" required>
+                        <input  class="input-style" type="submit" value="Search">
+                      </div>
+                    </form>
+                </div>
+                <tr>
+                    <td>{{ medicine.medecine_id }}</td>
+                    <td>{{ medicine.medecine_name }}</td>
+                    <td>{{ medicine.medecine_description }}</td>
+                    <td>{{ medicine.quantity }}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </section>
+</body>
+</body>
+</html>

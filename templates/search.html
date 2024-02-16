@@ -1,0 +1,43 @@
+{% extends "search-base.html" %}
+{% block content %}
+    <section>
+        <div class="home_button">
+            <h2>PHARMACY NAME</h2>
+        </div>
+        <div class="stock-new">
+            <button><a id="new-med" href="/addstock"><h2>Add new stock</h2></a></button>
+        </div>
+        <div class="stock-edit">
+            <button><a id="new-med" href="/"><h2>Edit stock</h2></a></button>
+        </div>    
+    </section>
+
+    <section class="table-section">
+        <table>
+            <thead>
+                <tr>
+                    <th>Medecine name</th>
+                    <th>Pharmacy Name</th>
+                    <th>Address</th>
+                    <th>Phone number</th>
+                    <th>Medecine Description</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% if medecine %}
+                <tr>
+                    <td>{{ medecine.med_name }}</td>
+                    <td>{{ pharmacy.pharmacy_name }}</td>
+                    <td>{{ pharmacy.address }}</td>
+                    <td>{{ pharmacy.phonenumber }}</td>
+                    <td>{{ medecine.med_description }}</td>
+                </tr>
+                {% else %}
+                <tr>
+                    <td colspan="5">No data found</td>
+                </tr>
+                {% endif %}
+            </tbody>
+        </table>
+    </section>
+{% endblock %}
