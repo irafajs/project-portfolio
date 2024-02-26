@@ -38,7 +38,6 @@ def home():
                 pharmacy_data_list.append(pharmacy_data)
             return render_template("search.html", medecine=medecine_data_list, pharmacy=pharmacy_data_list)
         if not medecine_info:
-            flash("No medicine found", "error")
             return render_template("nomed.html")
     elif request.method == 'GET':
         return render_template("home.html")
