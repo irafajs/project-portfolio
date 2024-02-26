@@ -1,0 +1,36 @@
+{% extends "base.html" %}
+
+{% block content %}
+{% include 'message.html' %}
+    <!--section class="table-section"-->
+    <section class="table_nu">
+        <table>
+            <thead>
+                <tr>
+                    <th>Medecine name</th>
+                    <th>Pharmacy Name</th>
+                    <th>Address</th>
+                    <th>Phone number</th>
+                    <th>Medecine Description</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% if medecine %}
+                    {% for i in range(medecine|length) %}
+                        <tr>
+                            <td>{{ medecine[i].med_name }}</td>
+                            <td>{{ pharmacy[i].pharmacy_name }}</td>
+                            <td>{{ pharmacy[i].address }}</td>
+                            <td>{{ pharmacy[i].phonenumber }}</td>
+                            <td>{{ medecine[i].med_description }}</td>
+                        </tr>
+                    {% endfor %}
+                {% else %}
+                    <tr>
+                        <td colspan="5">No data found</td>
+                    </tr>
+                {% endif %}
+            </tbody>
+        </table>
+    </section>
+{% endblock %}

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>{% block title %}register{% endblock %}</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+  <link rel="stylesheet" href="static/styles/base.css">
+  
+  </head>
+
+<body>
+  {% include 'message.html' %}
+  <div class="home_button">
+    <a id="home" href="/"><h2>HOME</h2></a>
+  </div>
+    <form method="POST" class="login-form">
+      <h3 align="center">Sign Up</h3>
+      <div class="form-group">
+        <label for="email"></label>
+        <input
+          type="email"
+          class="form-control"
+          id="email"
+          name="email"
+          placeholder="Enter email"
+        />
+      </div>
+      <div class="form-group">
+        <label for="pharmacyName"></label>
+        <input
+          type="text"
+          class="form-control"
+          id="pharmacyName"
+          name="pharmacyName"
+          placeholder="Enter pharmacy name"
+        />
+      </div>
+      <div class="form-group">
+        <label for="phonenumber"></label>
+        <input
+          type="text"
+          class="form-control"
+          id="phonenumber"
+          name="phonenumber"
+          placeholder="phone number"
+        />
+      </div>
+      <div class="form-group">
+        <label for="fulladdress"></label>
+        <input
+          type="text"
+          class="form-control"
+          id="fulladdress"
+          name="fulladdress"
+          placeholder="Enter addr(Di.e KN 5st near KIsimenti)"
+        />
+      </div>
+      <div class="form-group">
+        <label for="password1"></label>
+        <input
+          type="password"
+          class="form-control"
+          id="password1"
+          name="password1"
+          placeholder="Enter password"
+        />
+      </div>
+      <div class="form-group">
+        <label for="password2"></label>
+        <input
+          type="password"
+          class="form-control"
+          id="password2"
+          name="password2"
+          placeholder="Confirm password"
+        />
+      </div>
+      <br />
+      <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+</body>
+</html>

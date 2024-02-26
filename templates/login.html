@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>{% block title %}login{% endblock %}</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+  <link rel="stylesheet" href="static/styles/base.css">
+  
+  </head>
+
+<body>
+  {% include 'message.html' %}
+  <div class="home_button">
+    <a id="home" href="/"><h2>HOME</h2></a>
+  </div> 
+  <form method="POST" class="login-form">
+    <h3 class="login-register-box">Login</h3>
+    <div>
+      <label for="email"></label>
+      <input
+        type="email"
+        class="form-control"
+        id="email"
+        name="email"
+        placeholder="Enter email"
+      />
+    </div>
+    <div>
+      <label for="password"></label>
+      <input
+        type="password"
+        class="form-control"
+        id="password"
+        name="password"
+        placeholder="Enter password"
+      />
+    </div>
+    <br />
+    <button type="submit">Login</button>
+  </form>
+</body>
+</html>
