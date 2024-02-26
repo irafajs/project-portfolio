@@ -1,0 +1,39 @@
+{% extends "profile-base.html" %} {% block content
+%}
+{% include 'message.html' %}
+    <section>
+        <div class="addstock">
+            <button><a id="addstock" href="/addstock"><h2>Add new stock</h2></a></button>
+        </div>
+    </section>
+
+    <section class="table-nu">
+        <table>
+            <thead>
+                <tr>
+                    <th>Medecine ID</th>
+                    <th>Medicine Name</th>
+                    <th>Medecine description</th>
+                    <th>Quantity</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody id="med_list">
+                {% for medecine in medecines %}
+                <tr>
+                    <td>{{ medecine.med_id }}</td>
+                    <td>{{ medecine.med_name }}</td>
+                    <td>{{ medecine.med_description }}</td>
+                    <td>{{ medecine.quantity }}</td>
+                    <td>
+                        <form>
+                           <input type="hidden" class="med-id" value="{{ medecine.med_id }}">
+                           <input type="button" class="delete" value="Delete">
+                       </form>
+                    </td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </section>
+{% endblock %}

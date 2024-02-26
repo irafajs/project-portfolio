@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>{% block title %}Home{% endblock %}</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+  <link rel="stylesheet" href="static/styles/base.css">
+  <link rel="stylesheet" href="static/styles/profile-base.css">
+  <link rel="stylesheet" href="static/styles/profile.css">
+</head>
+<body>
+  <header>
+    <div class="homecorner">
+      <button><a id="home" href="/"><h2>HOME</h2></a></button>
+    </div>
+  </header>
+  {% block content %}
+
+  {% endblock %}
+  <footer>
+    <p><i><b>YOUR PRESCRIBED MEDECINE NEAR YOU</i></b></p>
+  </footer>
+</body>
+</html>
