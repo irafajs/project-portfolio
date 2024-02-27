@@ -49,3 +49,13 @@ our SQL database.
 > There is admin side of the Pharmacie owner, once registered, and logged in the owner can add stock of 
   medecines they have in real time, if the medecine is no
   longer available in their pharmacy they can delete it where it no longer availbale for the end-user..
+
+>IINSTALLATION
+_________________
+
+flask
+Flask-SQLAlchemy
+flask-login
+PYTHON
+
+To run the app clone it fron this git hub and running using the app file by doing ./app
