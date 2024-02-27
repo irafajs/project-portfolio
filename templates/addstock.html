@@ -1,0 +1,33 @@
+{% extends "profile-base.html" %} 
+{% block content %}
+{% include 'message.html' %}
+  <div class="backbutton">
+    <button><a id="Back" href="/admin_profile"><h2>BACK</h2></a></button>
+  </div>
+    <section class="table-nu">
+        <form method="POST">
+            <label for="medecine_name"></label>
+            <input 
+              type="text"
+              id="medecine_name"
+              name="medecine_name"
+              placeholder="Medicine Name"
+            />
+          <label for="description"></label>
+            <input
+              type="text" 
+              id="description"
+              name="description"
+              placeholder="Description"
+            />
+          <label for="quantity"></label>
+            <input
+              type="number"
+              id="quantity"
+              name="quantity"
+              placeholder="Quantity"
+            />
+            <button type="submit">Submit</button>
+        </form>
+    </section>
+{% endblock %}

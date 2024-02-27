@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>{{ pharm_name }}</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+  <link rel="stylesheet" href="static/styles/base.css">
+  <link rel="stylesheet" href="static/styles/profile.css">
+  <link rel="stylesheet" href="static/styles/profile-base.css">
+  <script src="static/scripts/delete_row.js"></script>
+  <script src="static/scripts/scrollupdwon.js"></script>
+  
+</head>
+
+</body class="scroll">
+  <header>
+    <div>
+      <h2>{{ pharm_name }}</h2>
+      <button class="logoutbutton"><a id="home" href="/login"><h2>Logout</h2></a></button>
+    </div>
+  </header>
+  {% block content %}
+
+  {% endblock %}
+  <footer>
+    <p><i><b>YOUR PRESCRIBED MEDECINE NEAR YOU</i></b></p>
+  </footer>
+</body>
+</html>

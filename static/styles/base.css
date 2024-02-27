@@ -1,0 +1,127 @@
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+.scroll {
+  overflow-y: auto;
+}
+
+.container {
+  text-align: center;
+}
+
+.login-register-box {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.login-register-box div {
+  background-color: #ADD8E6;
+  padding: 30px;
+  border-radius: 20px;
+}
+
+.login-form {
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  background-color: #ADD8E6;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.search-box {
+  margin-top: 20px;
+}
+
+.subscribe-form {
+  display: flex;
+  align-items: center;
+}
+
+.subscribe-form input {
+  border-radius: 10px 10px 10px 10px;
+  padding: 30px;
+  color: black;
+  border: 1px solid #4CAF50;
+  cursor: pointer;
+}
+
+.input-style {
+  background-color: lightblue;
+}
+
+.green {
+  color: green;
+}
+
+.yellow {
+  color: yellow;
+}
+
+.home_button {
+  position: absolute; 
+  top: 0; 
+  left: 0; 
+  /*background-color: #bbb7bd;*/
+}
+
+footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: lightblue;
+  padding: 20px; 
+  text-align: center;
+}
+
+
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: lightblue;
+  padding: 30px;
+}
+
+.homecorner {
+  postion: absolute;
+  top: auto;
+  left: auto;
+  }
+
+.login_top {
+  position: absolute;
+  top: 3.1%;
+  right: 10%;
+}
+
+.signup_top {
+  position: absolute;
+  top: 3.1%;
+  right: 2%;
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+th, td {
+  padding: 8px;
+  text-align: left;
+  border-bottom: 1px solid #DDD;
+}
+
+tr:hover {background-color: #D6EEEE;}
+

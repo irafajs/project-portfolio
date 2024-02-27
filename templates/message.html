@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+  <link rel="stylesheet" href="static/styles/flashmessage.css">
+  <script src="static/scripts/flashmessage.js"></script>
+  <script src="static/scripts/scrollupdwon.js"></script>
+</head>
+<body>
+
+{% with msg = get_flashed_messages(with_categories=True) %}
+{% if msg %}
+{% for category, message in msg %}
+<div class="alert alert-{{ category }} alert-dismissible fade show" role="alert">
+  <p><strong>{{ message }}</strong></p>
+</div>
+{% endfor %}
+{% endif %}
+{% endwith %}
+</body>
+</html>
